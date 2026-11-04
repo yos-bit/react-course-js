@@ -18,3 +18,5 @@ export const getDirectorTitles = (movies, directorName) =>
   movies
     .filter((movie) => movie.director.name === directorName)
     .map((movie) => movie.title);
+export const getTopRated = (movies, count) =>
+  movies.sort((a, b) => b.rating - a.rating).slice(0, count);
