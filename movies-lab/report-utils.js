@@ -17,7 +17,7 @@ export const markAsWatched = (movies, id) => {
 };
 
 export const renameActor = (movie, index, newName) => {
-  const copy = { ...movie };
-  copy.cast[index].name = newName;
+  const copy = { ...movie, cast: [...movie.cast] };
+  copy.cast[index] = { ...copy.cast[index], name: newName };
   return copy;
 };
