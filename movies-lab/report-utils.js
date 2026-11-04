@@ -13,7 +13,6 @@ export const sortByYear = (movies) =>
 
 export const markAsWatched = (movies, id) => {
   const movie = movies.find((movie) => movie.id === id);
-  movie.watched = true;
   return movies;
 };
 
